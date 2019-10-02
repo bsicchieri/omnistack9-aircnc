@@ -1,12 +1,17 @@
 //importando o express
 const express = require('express');
 
+//importando o multer e uploadConfig
+const multer = require('multer');
+const uploadConfig = require('./config/upload');
+
 //importando o controller
 const SessionController = require('./controllers/SessionController');
 const SpotController = require('./controllers/SpotController');
 
 //variavel routes
 const routes = express.Router();
+const upload = multer(uploadConfig);
 
 //GET (buscar info no backend), POST (criar uma nova info no back)
 //PUT (editar info), DELETE (deletar info)
@@ -27,7 +32,8 @@ routes.post('/users', (req, res) => {
 */
 
 routes.post('/sessions', SessionController.store);
-routes.post('/spots', SessionController.store);
+//routes.post('/spots', SpotController.store);
+routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
 //exportando rotas do arquivo
 module.exports = routes;
