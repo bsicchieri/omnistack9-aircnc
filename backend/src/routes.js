@@ -3,6 +3,7 @@ const express = require('express');
 
 //importando o controller
 const SessionController = require('./controllers/SessionController');
+const SpotController = require('./controllers/SpotController');
 
 //variavel routes
 const routes = express.Router();
@@ -26,6 +27,7 @@ routes.post('/users', (req, res) => {
 */
 
 routes.post('/sessions', SessionController.store);
+routes.post('/spots', SessionController.store);
 
 //exportando rotas do arquivo
 module.exports = routes;
