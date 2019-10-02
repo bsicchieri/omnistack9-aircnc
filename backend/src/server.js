@@ -2,11 +2,19 @@
 //express: micro framework
 const express = require('express');
 
+//importando o mongoose (yarn add mongoose)
+const mongoose = require('mongoose');
+
 //importando rotas do arquivo
 const routes = require('./routes');
 
 //criando a aplicação (express: função)
 const app = express();
+
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/semana09?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 
 //requisições utilizarão o formato json
 app.use(express.json());
