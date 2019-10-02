@@ -32,8 +32,10 @@ routes.post('/users', (req, res) => {
 */
 
 routes.post('/sessions', SessionController.store);
+routes.get('/spots', SpotController.index);
 //routes.post('/spots', SpotController.store);
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
+
 
 //exportando rotas do arquivo
 module.exports = routes;
