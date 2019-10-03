@@ -16,6 +16,10 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/s
     useUnifiedTopology: true,
 })
 
+//req.query: acessar query params ({idade: req.query.idade}) - filtros
+//req.params: acessar route params ({id: req.params.id}) - edição e delete
+//req.body: acessar corpo da requisição - criação e edição
+
 //requisições utilizarão o formato json
 app.use(express.json());
 app.use(routes);

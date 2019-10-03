@@ -8,6 +8,8 @@ const uploadConfig = require('./config/upload');
 //importando o controller
 const SessionController = require('./controllers/SessionController');
 const SpotController = require('./controllers/SpotController');
+const DashboardController = require('./controllers/DashboardController');
+const BookingController = require('./controllers/BookingController');
 
 //variavel routes
 const routes = express.Router();
@@ -22,9 +24,6 @@ const upload = multer(uploadConfig);
 //node src/server.js (ctrl+c: stop)
 //yarn add nodemon -D (yarn dev)
 //(-D: informa p/ o projeto que essa dependência só será usada no desenvolvimento)
-//req.query: acessar query params ({idade: req.query.idade}) - filtros
-//req.params: acessar route params ({id: req.params.id}) - edição e delete
-//req.body: acessar corpo da requisição - criação e edição
 /*
 routes.post('/users', (req, res) => {
     return res.json(req.body); //({message: "Hello World})"
@@ -32,10 +31,14 @@ routes.post('/users', (req, res) => {
 */
 
 routes.post('/sessions', SessionController.store);
+
 routes.get('/spots', SpotController.index);
 //routes.post('/spots', SpotController.store);
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
+routes.get('/dashboard', DashboardController.show);
+
+routes.post('/spots/:spot_id/bookings', BookingController.store);
 
 //exportando rotas do arquivo
 module.exports = routes;

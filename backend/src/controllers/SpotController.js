@@ -35,6 +35,6 @@ module.exports = {
         //console.log(req.body);
         //console.log(req.file);
 
-        return res.json(spot)
+        return res.json(spot);
     }
 };
