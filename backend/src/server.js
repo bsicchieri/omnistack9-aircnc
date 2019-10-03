@@ -5,6 +5,9 @@ const express = require('express');
 //importando o mongoose (yarn add mongoose)
 const mongoose = require('mongoose');
 
+//importando o cors
+const cors = require('cors');
+
 //importando rotas do arquivo
 const routes = require('./routes');
 
