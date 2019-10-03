@@ -24,6 +24,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/s
 //req.body: acessar corpo da requisição - criação e edição
 
 //requisições utilizarão o formato json
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
