@@ -8,6 +8,9 @@ const mongoose = require('mongoose');
 //importando o cors
 const cors = require('cors');
 
+//importando o path
+const path = require('path');
+
 //importando rotas do arquivo
 const routes = require('./routes');
 
@@ -26,6 +29,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/s
 //requisições utilizarão o formato json
 app.use(cors());
 app.use(express.json());
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 //porta para execução da aplicação (localhost:3333)
