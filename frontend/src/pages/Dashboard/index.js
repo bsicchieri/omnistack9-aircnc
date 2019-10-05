@@ -10,6 +10,10 @@ export default function Dashboard() {
 
     useEffect(() => {
         const socket = socketio('http://localhost:3333');
+
+        socket.on('hello', data => {
+            console.log(data);
+        })
     }, []);
 
     useEffect(() => {
