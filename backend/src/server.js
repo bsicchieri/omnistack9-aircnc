@@ -11,11 +11,16 @@ const cors = require('cors');
 //importando o path
 const path = require('path');
 
+const socketio = require('socket.io');
+const http = require('http');
+
 //importando rotas do arquivo
 const routes = require('./routes');
 
 //criando a aplicação (express: função)
 const app = express();
+const server = http.Server(app);
+const io = socketio(server);
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/semana09?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -33,4 +38,5 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 //porta para execução da aplicação (localhost:3333)
-app.listen(3333);
+//app.listen(3333);
+server.listen(3333);
