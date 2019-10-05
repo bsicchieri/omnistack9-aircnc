@@ -25,9 +25,13 @@ const io = socketio(server);
 io.on('connection', socket => {
     console.log('Usuário conectado', socket.id);
 
-    setTimeout(() => {
-        socket.emit('hello', 'World');  
-    }, 4000);
+    //setTimeout(() => {
+    //    socket.emit('hello', 'World');  
+    //}, 4000);
+
+    socket.on('omni', data => {
+        console.log(data);
+   })
 });
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/semana09?retryWrites=true&w=majority', {
