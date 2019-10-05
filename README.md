@@ -1,4 +1,4 @@
-<h1 align = "center"> # AirCnC - Air Code and Coffee <h1>
+<h1 align = "center"> # AirCnC - Air Code and Coffee </h1>
 Projeto desenvolvido durante a semana OmniStack 9.0 da Rocketseat.
 
 A aplicação permite realizar a reserva de spots, para desenvolvedores e empresas, em tempo real.
