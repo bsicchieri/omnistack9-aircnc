@@ -17,8 +17,11 @@ export default function Dashboard() {
         //socket.on('hello', data => {
         //   console.log(data);
         //})
-
         //socket.emit('omni', 'Stack');
+
+        socket.on('bookinh_request', data => {
+            console.log(data);
+        })
     }, []);
 
     useEffect(() => {
