@@ -9,13 +9,16 @@ export default function Dashboard() {
     const [spots, setSpots] = useState([]);
 
     useEffect(() => {
-        const socket = socketio('http://localhost:3333');
+        const user_id = localStorage.getItem('user');
+        const socket = socketio('http://localhost:3333', {
+            query: { user_id },
+        });
 
         //socket.on('hello', data => {
         //   console.log(data);
         //})
 
-        socket.emit('omni', 'Stack');
+        //socket.emit('omni', 'Stack');
     }, []);
 
     useEffect(() => {
