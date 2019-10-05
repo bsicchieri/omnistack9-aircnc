@@ -19,7 +19,7 @@ export default function Dashboard() {
         //})
         //socket.emit('omni', 'Stack');
 
-        socket.on('bookinh_request', data => {
+        socket.on('booking_request', data => {
             console.log(data);
         })
     }, []);
