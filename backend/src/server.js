@@ -22,6 +22,10 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server);
 
+io.on('connection', socket => {
+    console.log('Usuário conectado', socket.id);
+});
+
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/semana09?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
