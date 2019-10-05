@@ -22,8 +22,20 @@ const app = express();
 const server = http.Server(app);
 const io = socketio(server);
 
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/semana09?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+
+const connectedUsers = {};
+
 io.on('connection', socket => {
-    console.log('Usuário conectado', socket.id);
+    //console.log(socket.handshake.query);
+    //console.log('Usuário conectado', socket.id);
+
+    const { user_id } = socket.handshake.query;
+
+    connectedUsers[user_id] = socket.id;
     
     //setTimeout(() => {
     //    socket.emit('hello', 'World');  
@@ -34,10 +46,12 @@ io.on('connection', socket => {
     //})
 });
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4n2sw.mongodb.net/semana09?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+app.use((req, res, next) => {
+    req.io = io;
+    req.connectedUsers = connectedUsers;
+
+    return next();
+});
 
 //req.query: acessar query params ({idade: req.query.idade}) - filtros
 //req.params: acessar route params ({id: req.params.id}) - edição e delete
