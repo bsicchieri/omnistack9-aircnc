@@ -25,7 +25,7 @@ export default function Dashboard() {
             //console.log(data);
             setRequests([ ... requests, data]);
         })
-    }, [requests]);
+    }, [requests, socket]);
 
     useEffect(() => {
         async function loadSpots() {
@@ -48,8 +48,8 @@ export default function Dashboard() {
                         <p>
                             <strong>{request.user.email}</strong> está solicitando uma reserva em <strong>{request.spot.company}</strong> para a data: <strong>{request.date}</strong>
                         </p>
-                        <button>ACEITAR</button>
-                        <button>REJEITAR</button>
+                        <button className="accept">ACEITAR</button>
+                        <button className="reject">REJEITAR</button>
                     </li>
                 ))}
             </ul>
