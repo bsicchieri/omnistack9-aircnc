@@ -18,7 +18,6 @@ Desenvolvido durante a semana OmniStack9 da Rocketseat.
 
 O projeto foi desenvolvido com as seguintes tecnologias:
 
-- Backend com NodeJS;
-- Frontend com React;
-- Mobile com React Native;
-- Atualização em tempo real utilizando o socket.io.
+- Backend com NodeJS
+- Frontend com React
+- Mobile com React Native
