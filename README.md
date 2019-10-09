@@ -18,6 +18,6 @@ Desenvolvido durante a semana OmniStack9 da Rocketseat.
 
 O projeto foi desenvolvido com as seguintes tecnologias:
 
-- Backend com NodeJS
-- Frontend com React
-- Mobile com React Native
+- NodeJS
+- React
+- React Native
