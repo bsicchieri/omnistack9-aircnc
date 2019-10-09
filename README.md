@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="AirCnC" src=".github/logo;png" width="250px" />
+    <img alt="AirCnC" src=".github/logo.png" width="250px" />
 < /h1>
 
 <h4 align="center"> Air Code and Coffee </h4>
