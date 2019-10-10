@@ -8,13 +8,13 @@
   <img alt="Frontend" src=".github/aircnc.png" width="100%">
 </p>
 
-## Projeto
+## Project
 
 AirCnC is a project that aims to connect companies that want to open spots and developers looking for a place to exchange ideas with devs, get to know the company and work there for a period.
 
 Developed during Rocketseat's OmniStack9 Week.
 
-## Tecnologias
+## Technologies
 
 The project was developed with the following technologies:
 
