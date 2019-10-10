@@ -10,14 +10,14 @@
 
 ## Projeto
 
-O AirCnC é um projeto que visa conectar empresas que querem abrir spots e desenvolvedores que procuram um lugar para trocar ideias com devs, conhecer a empresa e trabalhar lá por um período.
+AirCnC is a project that aims to connect companies that want to open spots and developers looking for a place to exchange ideas with devs, get to know the company and work there for a period.
 
-Desenvolvido durante a semana OmniStack9 da Rocketseat.
+Developed during Rocketseat's OmniStack9 Week.
 
 ## Tecnologias
 
-O projeto foi desenvolvido com as seguintes tecnologias:
+The project was developed with the following technologies:
 
-- NodeJS
-- React
+- Node.js
+- ReactJS
 - React Native
