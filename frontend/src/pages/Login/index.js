@@ -26,7 +26,7 @@ export default function Login({ history }) {
             </p>
 
             <form onSubmit={handleSubmit}>
-            <label htmlFor="email">E-MAIL *</label>
+            <label htmlFor="email">EMAIL *</label>
             <input 
                 id="email"
                 type="email"
