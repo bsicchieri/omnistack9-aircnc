@@ -58,10 +58,10 @@ export default function Dashboard() {
                 {requests.map(request => (
                     <li key={request._id}>
                         <p>
-                            <strong>{request.user.email}</strong> está solicitando uma reserva em <strong>{request.spot.company}</strong> para a data: <strong>{request.date}</strong>
+                            <strong>{request.user.email}</strong> is requesting a reservation at <strong>{request.spot.company}</strong> to date: <strong>{request.date}</strong>
                         </p>
-                        <button className="accept" onClick={() => handleAccept(request._id)}>ACEITAR</button>
-                        <button className="reject" onClick={() => handleReject(request._id)}>REJEITAR</button>
+                        <button className="accept" onClick={() => handleAccept(request._id)}>ACCEPT</button>
+                        <button className="reject" onClick={() => handleReject(request._id)}>REJECT</button>
                     </li>
                 ))}
             </ul>
@@ -70,13 +70,13 @@ export default function Dashboard() {
                     <li key={spot._id}>
                         <header style={{ backgroundImage: `url(${spot.thumbnail_url})` }} />
                         <strong>{spot.company}</strong>
-                        <span>{spot.price ? `R$${spot.price}/dia` : 'GRATUITO'}</span>
+                        <span>{spot.price ? `R$${spot.price}/day` : 'FREE'}</span>
                     </li>    
                 ))}
             </ul>
 
             <Link to="/new">
-                <button className="btn">Cadastrar novo spot</button>
+                <button className="btn">Register new spot</button>
             </Link>
         </>
     )

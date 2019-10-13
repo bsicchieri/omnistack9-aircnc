@@ -44,30 +44,30 @@ export default function New({ history }) {
                 <img src={camera} alt="Select img" />
             </label>
 
-            <label htmlFor="company">EMPRESA *</label>
+            <label htmlFor="company">COMPANY *</label>
             <input
                 id="company"
-                placeholder="Sua empresa"
+                placeholder="Your company"
                 value={company}
                 onChange={event => setCompany(event.target.value)}
             />
 
-            <label htmlFor="techs">TECNOLOGIAS * <span>(separadas por vírgula)</span></label>
+            <label htmlFor="techs">TECHNOLOGIES * <span>(comma separated)</span></label>
             <input
                 id="techs"
                 placeholder="Quais tecnologias usam?"
                 value={techs}
                 onChange={event => setTechs(event.target.value)}
             />
-            <label htmlFor="price">VALOR DA DIÁRIA * <span>(em branco para GRATUITO)</span></label>
+            <label htmlFor="price">DAILY RATE * <span>(blank for FREE)</span></label>
             <input
                 id="price"
-                placeholder="Valor cobrado por dia"
+                placeholder="Amount charged per day"
                 value={price}
                 onChange={event => setPrice(event.target.value)}
             />
 
-            <button type="submit" className="btn">Cadastrar</button>
+            <button type="submit" className="btn">Register</button>
         </form>
     )
 }
