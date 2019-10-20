@@ -18,6 +18,6 @@ Developed during Rocketseat's OmniStack9 Week.
 
 The project was developed with the following technologies:
 
-- Node.js
-- ReactJS
-- React Native
+- Node.js;
+- ReactJS;
+- React Native.
